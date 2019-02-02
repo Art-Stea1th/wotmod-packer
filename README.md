@@ -1,4 +1,4 @@
-#*.wotmod Packer
+# *.wotmod Packer
 
 This is a very simple utility that speeds up debugging mods.
 
