@@ -1,7 +1,7 @@
 from compileall import compile_dir
 from itertools import chain
 from os import rename, walk, remove, makedirs
-from os.path import join, abspath, dirname, splitext, split, exists, normpath
+from os.path import join, abspath, dirname, splitext, split, exists, normpath, pardir
 from re import IGNORECASE, search
 from shutil import copytree, make_archive, rmtree, register_archive_format
 from tempfile import gettempdir
@@ -55,7 +55,7 @@ def packMod():
 
 
 def _getModInfo():
-    path = dirname(abspath(__file__))
+    path = normpath(join(dirname(abspath(__file__)), pardir))
     for entry in _walkWithCriteria(path, lambda e: search(r'^mod_.*\.py$', e, IGNORECASE)):
         dirName, fileName = split(entry)
         return dirName, splitext(fileName)[0]

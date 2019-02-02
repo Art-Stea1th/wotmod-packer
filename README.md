@@ -6,7 +6,7 @@ This is a very simple utility that speeds up debugging mods.
 - Run the utility
 - Start the game, after everything is rebuilt and deploy
 
-just put this file next to the folder where your mod_{name}.py is located and run
+just put this package next to the folder where your mod_{name}.py is located and run
 
 All *.py modules and packages that are at this level and below will be compiled and packaged in:
 - mod_{name}.wotmod\res\scripts\client\gui\mods, like the other, near mod files.
